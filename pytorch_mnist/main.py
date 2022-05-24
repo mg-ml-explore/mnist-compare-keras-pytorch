@@ -3,7 +3,7 @@ from . import data_utils
 from . import model
 from . import train_test_utils
 
-def run(use_cuda: bool):
+def run(use_cuda: bool = False):
     device = "cpu"
     if use_cuda:
         device = "cuda"

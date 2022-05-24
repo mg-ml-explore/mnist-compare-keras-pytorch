@@ -3,3 +3,4 @@ __pycache__/
 *$py.class
 
 pytorch_mnist/data/MNIST
+data/MNIST
