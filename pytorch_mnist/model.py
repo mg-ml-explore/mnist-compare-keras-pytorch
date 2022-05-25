@@ -28,5 +28,5 @@ class MNISTNet(nn.Module):
         output = F.log_softmax(x, dim=1)
         return output
 
-    def summary(self):
-        summary(self, (1, 28, 28))
+    def summary(self, device):
+        summary(self, (1, 28, 28), device = device)

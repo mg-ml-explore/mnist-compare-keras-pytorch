@@ -13,8 +13,8 @@ def run(use_cuda: bool = False):
 
     # Define model
     net = model.MNISTNet()
-    net.summary()
     net.to(device)
+    net.summary(device)
 
     # Train model
     output = train_test_utils.train(net, mnist_train, device, use_cuda)
