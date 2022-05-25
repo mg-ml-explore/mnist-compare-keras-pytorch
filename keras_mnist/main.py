@@ -1,11 +1,11 @@
 from . import data_utils
-from . import model
+from . import model_utils
 from . import train_test_utils
 
 def run():
     x_train, y_train = data_utils.get_training_samples()
 
-    model = model.get_model()
+    model = model_utils.get_model()
     model.summary()
 
     train_test_utils.train_model(model, x_train, y_train)
