@@ -1,3 +1,4 @@
+from time import time
 
 from . import data_utils
 from . import model
@@ -17,7 +18,10 @@ def run(use_cuda: bool = False):
     net.summary(device)
 
     # Train model
-    output = train_test_utils.train(net, mnist_train, device, use_cuda)
+    start = time()
+    train_test_utils.train(net, mnist_train, device, use_cuda)
+    end = time()
+    print(f"Training duration: {end - start} seconds")
 
     # Load test data
     mnist_test = data_utils.load_test_data()
