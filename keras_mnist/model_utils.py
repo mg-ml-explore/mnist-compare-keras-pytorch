@@ -1,11 +1,12 @@
 from tensorflow import keras
+from tensorflow.keras import Sequential
 from tensorflow.keras import layers
 
 input_shape = (28, 28, 1)
 num_classes = 10
 
-def get_model():
-    model = keras.Sequential(
+def get_model() -> Sequential:
+    model = Sequential(
         [
             keras.Input(shape=input_shape),
             layers.Conv2D(32, kernel_size=(3, 3), activation="relu"),
