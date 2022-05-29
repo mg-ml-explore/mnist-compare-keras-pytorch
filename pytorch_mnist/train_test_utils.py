@@ -39,7 +39,7 @@ def test(model: nn.Module, test_loader: DataLoader, device: str):
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
 
-def train(model: nn.Module, train_valid_data: MNIST, device, use_cuda, batch_size = 1000, epochs = 10):
+def train(model: nn.Module, train_valid_data: MNIST, device, use_cuda, batch_size = 128, epochs = 15):
     train_data, valid_data = data_utils.split_train_valid(train_valid_data)
 
     train_loader = data_utils.get_data_loader(train_data, batch_size, use_cuda)
